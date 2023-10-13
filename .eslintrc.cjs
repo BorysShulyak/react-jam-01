@@ -73,6 +73,7 @@ module.exports = {
       }
     ],
     'func-names': 'error',
+    'react/prop-types': 'off',
     'no-restricted-imports': [
       'error',
       {

@@ -3,6 +3,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import { ArticleCard, ArticleCardSkeleton } from './components/ArticleCard';
+import { CommentForm } from './components/CommentForm';
 import { useArticles } from './hooks';
 
 const ArticlesCatalog = () => {
@@ -37,6 +38,7 @@ const ArticlesCatalog = () => {
             <ArticleCard title={articleData.title} />
           </Grid>
         ))}
+        <CommentForm articles={data} />
       </Grid>
     </Box>
   );
