@@ -25,7 +25,7 @@ const Header = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ bgcolor: 'white' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
@@ -37,7 +37,7 @@ const Header = () => {
               size="large"
               onClick={handleOpenNavMenu}
             >
-              <MenuIcon />
+              <MenuIcon sx={{ fill: 'black' }} />
             </IconButton>
             <Menu
               keepMounted
@@ -80,7 +80,7 @@ const Header = () => {
                 <Button
                   key={navigationItem}
                   component="li"
-                  sx={{ my: 2, display: 'block', color: 'white' }}
+                  sx={{ my: 2, display: 'block', color: 'black' }}
                   variant="text"
                   onClick={handleCloseNavMenu}
                 >
