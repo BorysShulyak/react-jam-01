@@ -34,13 +34,13 @@ const Header = () => {
               aria-haspopup="true"
               aria-label="navigation menu"
               color="inherit"
+              data-testid="Header-menu-button"
               size="large"
               onClick={handleOpenNavMenu}
             >
               <MenuIcon sx={{ fill: 'black' }} />
             </IconButton>
             <Menu
-              keepMounted
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: 'bottom',

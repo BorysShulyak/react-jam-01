@@ -6,7 +6,7 @@ import * as React from 'react';
 
 const ArticleCardSkeleton = () => {
   return (
-    <Card sx={{ width: '375px' }} variant="outlined">
+    <Card data-testid="ArticleCardSkeleton" sx={{ width: '375px' }} variant="outlined">
       <Skeleton height={140} variant="overlay" />
       <CardContent>
         <Skeleton height={32} sx={{ mb: '8px' }} variant="inline" />

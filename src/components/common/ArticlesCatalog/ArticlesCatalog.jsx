@@ -25,21 +25,36 @@ const ArticlesCatalog = () => {
       >
         NEWS
       </Typography>
-      <Grid container spacing={{ xs: 1, sm: 2, md: 3 }}>
+      <Grid container spacing={{ xs: 1, sm: 2, md: 3 }} sx={{ mb: '24px' }}>
         {isLoading &&
-          [...Array(9)].map(() => (
-            <Grid item md={4} sm={6} sx={{ display: 'flex', justifyContent: 'center' }} xs={12}>
+          [...Array(9)].map((_, index) => (
+            <Grid
+              // eslint-disable-next-line react/no-array-index-key
+              key={index}
+              item
+              md={4}
+              sm={6}
+              sx={{ display: 'flex', justifyContent: 'center' }}
+              xs={12}
+            >
               <ArticleCardSkeleton />
             </Grid>
           ))}
 
         {data?.map((articleData) => (
-          <Grid item md={4} sm={6} sx={{ display: 'flex', justifyContent: 'center' }} xs={12}>
+          <Grid
+            key={articleData.id}
+            item
+            md={4}
+            sm={6}
+            sx={{ display: 'flex', justifyContent: 'center' }}
+            xs={12}
+          >
             <ArticleCard title={articleData.title} />
           </Grid>
         ))}
-        <CommentForm articles={data} />
       </Grid>
+      <CommentForm articles={data} />
     </Box>
   );
 };

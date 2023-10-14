@@ -38,6 +38,7 @@ const CommentForm = ({ articles }) => {
           sx={{ width: '100%' }}
           onChange={handleArticleChange}
         >
+          <MenuItem value={0}>None</MenuItem>
           {articles?.map((article) => (
             <MenuItem key={article.id} value={article.id}>
               {article.title}
