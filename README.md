@@ -1,5 +1,14 @@
 # React Jam
 
+## Commands
+
+- `npm i` - install the dependencies
+- `npm run start` - start the app in the local environment
+- `npm run build` - create a production build
+- `npm run test` - run the tests
+- `npm run lint` - check the `eslint` and `prettier` errors
+- `npm run lint-fix` - autofix `eslint` and `prettier` errors
+
 ## How I have approached the problem
 I have decided to choose the Material UI components library for fast prototyping and CSS in JS support.
 
