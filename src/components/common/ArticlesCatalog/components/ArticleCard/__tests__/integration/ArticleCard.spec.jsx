@@ -6,7 +6,7 @@ import ArticleCard from '../../ArticleCard';
 
 const MOCK_ARTICLE_TITLE = 'Sample Article Title';
 
-describe('ArticleCard Component', () => {
+describe('ArticleCard', () => {
   it('should render the article title and description', () => {
     render(<ArticleCard title={MOCK_ARTICLE_TITLE} />);
     expect(screen.getByText(MOCK_ARTICLE_TITLE)).toBeInTheDocument();

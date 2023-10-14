@@ -17,7 +17,7 @@ async function fetchArticles() {
 
 const useArticles = () => {
   return useQuery({
-    queryKey: ['repoData'],
+    queryKey: ['articlesData'],
     queryFn: () => fetchArticles()
   });
 };

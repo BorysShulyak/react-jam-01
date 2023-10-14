@@ -6,7 +6,7 @@ import * as React from 'react';
 
 const CommentForm = ({ articles }) => {
   const [comment, setComment] = React.useState('');
-  const [articleId, setArticleId] = React.useState();
+  const [articleId, setArticleId] = React.useState(0);
 
   const handleArticleChange = (e) => {
     setArticleId(e.target.value);
@@ -36,6 +36,7 @@ const CommentForm = ({ articles }) => {
           id="article-field"
           label="Article"
           sx={{ width: '100%' }}
+          value={articleId}
           onChange={handleArticleChange}
         >
           <MenuItem value={0}>None</MenuItem>
