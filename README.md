@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# React Jam
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How I have approached the problem
+I have decided to choose the Material UI components library for fast prototyping and CSS in JS support.
 
-## Available Scripts
+The articles data fetches in the following way:
+1. Fetch the top articles.
+2. Get the 9 last articles from the list.
+3. Fetch the data for each article in the parallel.
+4. Return the resulted list.
 
-In the project directory, you can run:
+Comment form uses the same data to allow the user select the article to comment.
 
-### `npm start`
+All the components are covered with tests.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| Technology                  | Description                                                                         |
+| --------------------------- | ----------------------------------------------------------------------------------- |
+| React                       | The core components rendering library                                               |
+| Material UI                 | The components library for fast and high quality prototyping with CSS in JS support |
+| TanStack React Query        | The library for fetching, caching, synchronizing and updating server state          |
+| ESlint, Prettier            | Standard code quality tools                                                         |
+| Jest, React Testing Library | Standard React testing tools                                                        |
 
-### `npm test`
+## The interactive features of the page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Feature                                   | Description                                                                                                      |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Header Menu button (mobile)               | The user could click to show the pop-up with the navigation items                                                |
+| Articles Catalog (loading state: slow 3G) | The user could see the loading skeletons that replaced with the article cards after the successful data fetching |
+| Comment Form                              | The user could select the article, write the comment message and get the required result in the console          |
+| Footer link                               | The user could navigate to the 3rd party service (People web site)  tools                                        |
 
-### `npm run build`
+## Cover note
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### General description
+The solution is a simple SPA created with React library. For the fast and high quality prototyping we have choose the most popular and reliable open source libraries.
+The design is fully responsible.
+Additionally, the code was covered with tests to have higher confidence.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Features
+**Header**:
+- **User** visiting the page using the desktop device:
+  - The **logo** and the required **navigation items** are displayed.
+- **User** visiting the page using the mobile device:
+  - The **menu button** is displayed.
+  - **User** click on the **menu button** => the **popup** with navigation items is displayed.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Articles Catalog**:
+- **User** visiting the page:
+  - While the articles **data is loading**, the **loading skeletons** are displayed.
+  - After the **successful data loading**, the **articles cards** are displayed.
+  
+**Comment Form**:
+- **User** visiting the page:
+  - The **comment form** is displayed with the following components:
+    - **articles select field** to allow the user choose the article.
+    - **article comment field** to allow the user write a comment.
+    - **submit button** to allow the user submit the form and get the result in the browser console.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
